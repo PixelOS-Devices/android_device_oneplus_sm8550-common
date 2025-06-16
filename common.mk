@@ -26,10 +26,6 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService-Soong
-
 ifneq ($(TARGET_DEVICE),benz)
 # Alert slider
 PRODUCT_PACKAGES += \
