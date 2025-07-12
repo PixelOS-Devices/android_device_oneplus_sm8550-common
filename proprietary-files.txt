@@ -986,6 +986,7 @@ vendor/lib64/libqcbor.so
 
 # Sensors
 odm/bin/oplus_sensor_fb
+odm/etc/init/init.oplus.sensor.rc
 odm/lib64/liboplus_service.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
