@@ -445,10 +445,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # WiFi firmware symlinks
+ifeq ($(TARGET_BOARD_PLATFORM),crow)
+PRODUCT_PACKAGES += \
+    firmware_wlanmdsp.otaupdate_symlink \
+    firmware_qca6750_wlan_mac.bin_symlink \
+    firmware_qca6750_WCNSS_qcom_cfg.ini_symlink
+else
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
+endif
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8550-common/sm8550-common-vendor.mk)
